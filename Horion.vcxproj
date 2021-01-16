@@ -108,13 +108,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;D:\ProgrammeX\Dxx\Lib\x64;$(ProjectDir)minhook;$(LibraryPath)</LibraryPath>
-    <IncludePath>D:\ProgrammeX\Dxx\Include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\ProgrammeX\Dxx\Include;$(ProjectDir)include\glm;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\lib\x64;$(ProjectDir)minhook;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)include\glm</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BetaConf|x64'">
     <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\lib\x64;$(ProjectDir)minhook;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)include\glm</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -261,6 +263,7 @@
     <ClCompile Include="Horion\Command\Commands\TestCommand.cpp" />
     <ClCompile Include="Horion\Command\Commands\ToggleCommand.cpp" />
     <ClCompile Include="Horion\Command\Commands\UnbindCommand.cpp" />
+    <ClCompile Include="Horion\Command\Commands\WaypointCommand.cpp" />
     <ClCompile Include="Horion\Config\AccountInformation.cpp" />
     <ClCompile Include="Horion\Config\ConfigManager.cpp" />
     <ClCompile Include="Horion\DrawUtils.cpp" />
@@ -355,6 +358,7 @@
     <ClCompile Include="Horion\Module\Modules\Tracer.cpp" />
     <ClCompile Include="Horion\Module\Modules\TriggerBot.cpp" />
     <ClCompile Include="Horion\Module\Modules\Velocity.cpp" />
+    <ClCompile Include="Horion\Module\Modules\Waypoints.cpp" />
     <ClCompile Include="Horion\Module\Modules\Xray.cpp" />
     <ClCompile Include="Horion\Module\Modules\Zoom.cpp" />
     <ClCompile Include="Horion\path\goals\JoeGoal.cpp" />
@@ -437,6 +441,7 @@
     <ClInclude Include="Horion\Command\Commands\TestCommand.h" />
     <ClInclude Include="Horion\Command\Commands\ToggleCommand.h" />
     <ClInclude Include="Horion\Command\Commands\UnbindCommand.h" />
+    <ClInclude Include="Horion\Command\Commands\WaypointCommand.h" />
     <ClInclude Include="Horion\Config\AccountInformation.h" />
     <ClInclude Include="Horion\Config\ConfigManager.h" />
     <ClInclude Include="Horion\DrawUtils.h" />
@@ -531,6 +536,7 @@
     <ClInclude Include="Horion\Module\Modules\Tracer.h" />
     <ClInclude Include="Horion\Module\Modules\TriggerBot.h" />
     <ClInclude Include="Horion\Module\Modules\Velocity.h" />
+    <ClInclude Include="Horion\Module\Modules\Waypoints.h" />
     <ClInclude Include="Horion\Module\Modules\Xray.h" />
     <ClInclude Include="Horion\Module\Modules\Zoom.h" />
     <ClInclude Include="Horion\path\goals\JoeGoal.h" />
